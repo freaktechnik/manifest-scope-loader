@@ -9,6 +9,6 @@ module.exports = function(source) {
 
     manifest.scope = this.options.output.publicPath;
     this.value = manifest;
-    return JSON.stringify(manifest, undefined, this.minimize ? undefined , 2);
+    return JSON.stringify(manifest, undefined, this.minimize ? undefined : 2);
 };
 
