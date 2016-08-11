@@ -1,6 +1,6 @@
 {
   "name": "manifest-scope-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sets the scope of a web app manifest to the public path.",
   "main": "index.js",
   "scripts": {
