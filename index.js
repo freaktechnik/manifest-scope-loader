@@ -1,10 +1,16 @@
 module.exports = function(source) {
+    this.cacheable(true);
     var manifest;
     if(typeof this.inputValue == "object") {
         manifest = this.inputValue;
     }
     else {
-        manifest = JSON.parse(source);
+        try {
+            manifest = JSON.parse(source);
+        }
+        catch (e) {
+            manifest = this.exec(source, this.resourcePath);
+        }
     }
 
     manifest.scope = this.options.output.publicPath;
